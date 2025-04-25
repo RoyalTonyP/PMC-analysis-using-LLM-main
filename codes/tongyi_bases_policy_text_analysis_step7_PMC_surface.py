@@ -3,7 +3,7 @@ workbook = openpyxl.load_workbook("D:/PMC-analysis-using-LLM-main/results/main_v
 sheet = workbook.active
 
 list_main_variables = []
-for row in sheet.iter_rows(min_row=1, min_col=1, max_col=24, max_row=10):  # 假设我们只想读取前10行和前23列
+for row in sheet.iter_rows(min_row=1, min_col=1, max_col=24, max_row=10):  # 假设我们只想读取前10行和前23列 Suppose we only want to read the first 10 rows and the first 23 columns.
     list_main_variables.append([cell.value for cell in row])
 
 dict_main_variables = {i:{j:list_main_variables[index_j + 1][index_i + 1] for index_j, j in enumerate([list_main_variables[i][0] for i in range(1, len(list_main_variables))])} for index_i, i in enumerate(list_main_variables[0][1:])}
