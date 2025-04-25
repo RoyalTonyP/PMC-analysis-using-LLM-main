@@ -44,7 +44,7 @@ from openpyxl import Workbook
 wb = Workbook()
 ws = wb.active
 
-# 写入表头
+# 写入表头 Write the table headers.
 ws.cell(row=1, column=1, value="主变量")
 # 写入第一列
 row_0 = 2
@@ -58,7 +58,7 @@ for i in sub_scores[list(sub_scores.keys())[0]].keys():
 column = 2
 for i in sub_scores.keys():
     ws.cell(row=1, column=column, value=i)
-    # 写入数值
+    # 写入数值 Write the table headers.
     row_temp = 2
     temp_list = list(sub_scores[i].keys())
     temp_list.remove('PMC指数')
@@ -71,10 +71,3 @@ for i in sub_scores.keys():
 
 
 wb.save("D:/PMC-analysis-using-LLM-main/results/main_variable_scores_&_PMC_index.xlsx")
-
-
-
-
-
-
-
