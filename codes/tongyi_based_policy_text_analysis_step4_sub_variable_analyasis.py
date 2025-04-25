@@ -32,14 +32,16 @@ from openpyxl import Workbook
 wb = Workbook()
 ws = wb.active
 
-# 写入表头
+# 写入表头 Write the header
 ws['A1'] = "主变量"
 ws['B1'] = "子变量"
+# ws['A1'] = "Main Variables"
+# ws['B1'] = "Subvariables"
 column = 3
 for i in sub_scores.keys():
     ws.cell(row=1, column=column, value=i)
 
-    # 写入数值
+    # 写入数值 Write the values.
     row_temp = 2
     for j in sub_scores[i].keys():
         for k in sub_scores[i][j].keys():
@@ -47,7 +49,7 @@ for i in sub_scores.keys():
             row_temp += 1
     column += 1
 
-# 写入前两列
+# 写入前两列 Write data into the first two columns.
 row2 = 2
 for i in sub_scores[list(sub_scores.keys())[0]].keys():
     ws.cell(row=row2, column=1, value=i)
@@ -55,13 +57,4 @@ for i in sub_scores[list(sub_scores.keys())[0]].keys():
         ws.cell(row=row2, column=2, value=j)
         row2 += 1
 
-
-
-
 wb.save("D:/PMC-analysis-using-LLM-main/results/sub_variable_scores_standard.xlsx")
-
-
-
-
-
-
