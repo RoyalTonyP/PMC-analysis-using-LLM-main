@@ -1,9 +1,9 @@
 import pandas as pd
 
 # 定义文件路径
-file1 = r"D:/PMC-analysis-using-LLM-main/results/sub_variable_scores_labor.xlsx"
-file2 = r"D:/PMC-analysis-using-LLM-main/results/sub_variable_scores_standard.xlsx"
-output_file = r"D:/PMC-analysis-using-LLM-main/results/sub_variable_scores_accuracy.xlsx"
+file1 = r"D:\PMC-analysis-using-LLM-main\results\sub_variable_scores_labor.xlsx"
+file2 = r"D:\PMC-analysis-using-LLM-main\results\sub_variable_scores_standard.xlsx"
+output_file = r"D:\PMC-analysis-using-LLM-main\results\sub_variable_scores_accuracy.xlsx"
 
 
 # 读取Excel文件并处理合并单元格（填充主变量列）
